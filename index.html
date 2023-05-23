@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Enseñanza Epistolar</title>
+  <style>
+    /* Estilos CSS */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    
+    header {
+      background-color: #4287f5;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    nav {
+      background-color: #8fb2f3;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+    
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    nav ul li {
+      display: inline;
+      margin-right: 10px;
+    }
+    
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    
+    nav ul li a::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background-color: #fff;
+      visibility: hidden;
+      transform: scaleX(0);
+      transition: all 0.3s ease-in-out;
+    }
+    
+    nav ul li a:hover {
+      color: #ffcc00;
+    }
+    
+    nav ul li a:hover::before {
+      visibility: visible;
+      transform: scaleX(1);
+    }
+    
+    .container {
+      margin: 20px auto;
+      max-width: 800px;
+      text-align: center;
+    }
+    
+    .page-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    
+    .content {
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+    
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 20px;
+      }
+    }
+  </style>
+  <script>
+    // JavaScript para mostrar/ocultar las secciones según el enlace del menú
+    function mostrarSeccion(seccionId) {
+      var secciones = document.getElementsByClassName('seccion');
+      for (var i = 0; i < secciones.length; i++) {
+        secciones[i].style.display = 'none';
+      }
+      document.getElementById(seccionId).style.display = 'block';
+    }
+    
+    window.onload = function() {
+      mostrarSeccion('intro');
+    };
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Enseñanza Epistolar</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#" onclick="mostrarSeccion('intro')">Enseñanza Epistolar</a></li>
+      <li><a href="#" onclick="mostrarSeccion('research-question')">Pregunta de investigación</a></li>
+      <li><a href="#" onclick="mostrarSeccion('problem-statement')">Planteamiento del problema</a></li>
+      <li><a href="#" onclick="mostrarSeccion('objectives')">Objetivos</a></li>
+      <li><a href="#" onclick="mostrarSeccion('theoretical-framework')">Marco teórico</a></li>
+      <li><a href="#" onclick="mostrarSeccion('tracking-instrument')">Instrumento de Rastreo</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <section id="intro" class="seccion">
+      <h2 class="page-title">Enseñanza Epistolar</h2>
+      <div class="content">
+        <p>Una experimentación para pensar otras formas de crear, vivir y leer el mundo desde el aula de clase en Ciencias sociales.</p>
+      </div>
+    </section>
+    <section id="research-question" class="seccion">
+      <h2 class="page-title">Pregunta de investigación</h2>
+      <div class="content">
+        <p>¿Qué estética surge de una Educación Epistolar de las ciencias sociales basada en los signos libertarios y vitalistas en la institución educativa Jose Miguel de Restrepo y Puesta y la Institución Educativa Granjas Infantiles del grado octavo?</p>
+      </div>
+    </section>
+    <section id="problem-statement" class="seccion">
+      <h2 class="page-title">Planteamiento del problema</h2>
+      <div class="content">
+        <p>Mientras habito en las diferentes instituciones me doy cuenta de que el contexto es diferente, pero la educación no se aleja mucho, pues se presentan diferentes maneras de control sobre ese sujeto que se encuentra sentado escuchando las enseñanzas que tiene un docente para dar, pero en muchos casos estas enseñanzas no se preocupan por el sujeto que está habitando el aula de clases, sino por el contenido que se debe presentar...</p>
+      </div>
+    </section>
+    <section id="objectives" class="seccion">
+      <h2 class="page-title">Objetivos</h2>
+      <h3>Objetivo general:</h3>
+      <div class="content">
+        <p>Mapear una enseñanza epistolar de las ciencias sociales basada en signos hedonistas realizada en dos Instituciones Educativas del Municipio de Copacabana, a través de pistas metodológicas derivadas de la Cartografía, con el fin de pensar otras formas de crear, vivir y leer el mundo desde el aula de clase.</p>
+      </div>
+      <h3>Objetivos específicos:</h3>
+      <div class="content">
+        <ul>
+          <li>Descubrir los signos hedonistas presentes en las cartas con potencial didáctico para el grado octavo en el área de Ciencias Sociales.</li>
+          <li>Leer los signos hedonistas presentes en las cartas realizadas por estudiantes de dos Instituciones Educativas del municipio de Copacabana.</li>
+          <li>Escribir las otras formas de crear, vivir y leer el mundo desde el aula producidas a partir de la experimentación de la enseñanza epistolar de las ciencias sociales.</li>
+        </ul>
+      </div>
+    </section>
+    <section id="theoretical-framework" class="seccion">
+      <h2 class="page-title">Marco teórico</h2>
+      <div class="content">
+        <p>Estética: Farina y Albernaz (2017) lo explican como la sensibilidad de la subjetividad "Tienen que ver con un proceso de formación estética. Es decir, con un proceso de formación de los modos de ver, oír y decir, de los modos de ubicarse en la realidad, que configuran a una subjetividad." (P.p. 116).</p>
+        <p>Signos: Gallo (2017) "Enseñar y aprender consiste básicamente en ofrecer e interpretar los signos que emiten las cosas" (P.p. 200) teniendo como propósito de nuestro trabajo entender los momentos que brindan las interacciones educativas.</p>
+        <p>El género Epistolar: "La epístola es, indudablemente, capaz de crear actos de comunicación de manera homologable a la simple conversación oral por medio de determinados actos elocutivos de distinta índole. Y de igual manera si la consideramos a partir de la modalidad interaccional del acto de la comunicación puede ser concebida como apertura a una secuencia conversacional" (Roca Sierra, M. 1990, 327. Las cursivas son nuestras).</p>
+      </div>
+    </section>
+    <section id="tracking-instrument" class="seccion">
+      <h2 class="page-title">Instrumento de Rastreo</h2>
+      <div class="content">
+        <p>Aquí podemos contar con varias cartas para trabajar dentro del aula de clases. En este se diferencian por temas y grados para el posterior trabajo. Puedes acceder al documento <a href="https://docs.google.com/spreadsheets/d/1pXzw-Y7hyTXULSsgWx3pZKQapp4hbrzl/edit#gid=1204839693">aquí</a>.</p>
+      </div>
+    </section>
+  </div>
+  <script>
+    // JavaScript para centrar el texto verticalmente y ocultar las secciones
+    window.onload = function() {
+      mostrarSeccion('intro');
+      var container = document.getElementsByClassName('container')[0];
+      var secciones = document.getElementsByClassName('seccion');
+      for (var i = 0; i < secciones.length; i++) {
+        secciones[i].style.display = 'none';
+      }
+      container.style.display = 'block';
+    };
+  </script>
+</body>
+</html>
