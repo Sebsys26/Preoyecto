@@ -1,183 +1,158 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
   <title>Enseñanza Epistolar</title>
+
   <style>
-    /* Estilos CSS */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      text-align: center;
+      background-color: #f2f2f2;
+      background-image: url(img/Imagen\ de\ WhatsApp\ 2023-05-23\ a\ las\ 15.39.25.jpg)
     }
-    
-    header {
-      background-color: #4287f5;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    
-    nav {
-      background-color: #8fb2f3;
+
+    #menu {
+      background-color: #333;
       color: #fff;
       padding: 10px;
       text-align: center;
     }
-    
-    nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-    
-    nav ul li {
-      display: inline;
+
+    .menu-link {
+      text-decoration: none;
+      color: #fff;
       margin-right: 10px;
     }
-    
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-      position: relative;
-      transition: color 0.3s ease;
+
+    .menu-link:hover {
+      text-decoration: underline;
     }
-    
-    nav ul li a::before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 2px;
-      bottom: -5px;
-      left: 0;
-      background-color: #fff;
-      visibility: hidden;
-      transform: scaleX(0);
-      transition: all 0.3s ease-in-out;
+
+    .content {
+      display: none;
+      margin: 20px;
     }
-    
-    nav ul li a:hover {
-      color: #ffcc00;
-    }
-    
-    nav ul li a:hover::before {
-      visibility: visible;
-      transform: scaleX(1);
-    }
-    
-    .container {
-      margin: 20px auto;
-      max-width: 800px;
+
+    .content.active {
+      display: block;
       text-align: center;
     }
-    
-    .page-title {
-      font-size: 24px;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-    
-    .content {
+
+    h1 {
+      color: black;
       margin-bottom: 20px;
-      text-align: justify;
+
+
+    }
+
+    p {
+        color: black;
+        line-height: 1.5;
+        text-align: center;
+
+    }
+
+    .titulo{
+      color: white;
+      margin-bottom: 30px;
     }
     
-    @media (max-width: 768px) {
-      .container {
-        padding: 0 20px;
-      }
-    }
   </style>
-  <script>
-    // JavaScript para mostrar/ocultar las secciones según el enlace del menú
-    function mostrarSeccion(seccionId) {
-      var secciones = document.getElementsByClassName('seccion');
-      for (var i = 0; i < secciones.length; i++) {
-        secciones[i].style.display = 'none';
-      }
-      document.getElementById(seccionId).style.display = 'block';
-    }
-    
-    window.onload = function() {
-      mostrarSeccion('intro');
-    };
-  </script>
 </head>
 <body>
-  <header>
-    <h1>Enseñanza Epistolar</h1>
-  </header>
-  <nav>
-    <ul>
-      <li><a href="#" onclick="mostrarSeccion('intro')">Enseñanza Epistolar</a></li>
-      <li><a href="#" onclick="mostrarSeccion('research-question')">Pregunta de investigación</a></li>
-      <li><a href="#" onclick="mostrarSeccion('problem-statement')">Planteamiento del problema</a></li>
-      <li><a href="#" onclick="mostrarSeccion('objectives')">Objetivos</a></li>
-      <li><a href="#" onclick="mostrarSeccion('theoretical-framework')">Marco teórico</a></li>
-      <li><a href="#" onclick="mostrarSeccion('tracking-instrument')">Instrumento de Rastreo</a></li>
-    </ul>
-  </nav>
-  <div class="container">
-    <section id="intro" class="seccion">
-      <h2 class="page-title">Enseñanza Epistolar</h2>
-      <div class="content">
-        <p>Una experimentación para pensar otras formas de crear, vivir y leer el mundo desde el aula de clase en Ciencias sociales.</p>
-      </div>
-    </section>
-    <section id="research-question" class="seccion">
-      <h2 class="page-title">Pregunta de investigación</h2>
-      <div class="content">
-        <p>¿Qué estética surge de una Educación Epistolar de las ciencias sociales basada en los signos libertarios y vitalistas en la institución educativa Jose Miguel de Restrepo y Puesta y la Institución Educativa Granjas Infantiles del grado octavo?</p>
-      </div>
-    </section>
-    <section id="problem-statement" class="seccion">
-      <h2 class="page-title">Planteamiento del problema</h2>
-      <div class="content">
-        <p>Mientras habito en las diferentes instituciones me doy cuenta de que el contexto es diferente, pero la educación no se aleja mucho, pues se presentan diferentes maneras de control sobre ese sujeto que se encuentra sentado escuchando las enseñanzas que tiene un docente para dar, pero en muchos casos estas enseñanzas no se preocupan por el sujeto que está habitando el aula de clases, sino por el contenido que se debe presentar...</p>
-      </div>
-    </section>
-    <section id="objectives" class="seccion">
-      <h2 class="page-title">Objetivos</h2>
-      <h3>Objetivo general:</h3>
-      <div class="content">
-        <p>Mapear una enseñanza epistolar de las ciencias sociales basada en signos hedonistas realizada en dos Instituciones Educativas del Municipio de Copacabana, a través de pistas metodológicas derivadas de la Cartografía, con el fin de pensar otras formas de crear, vivir y leer el mundo desde el aula de clase.</p>
-      </div>
-      <h3>Objetivos específicos:</h3>
-      <div class="content">
-        <ul>
-          <li>Descubrir los signos hedonistas presentes en las cartas con potencial didáctico para el grado octavo en el área de Ciencias Sociales.</li>
-          <li>Leer los signos hedonistas presentes en las cartas realizadas por estudiantes de dos Instituciones Educativas del municipio de Copacabana.</li>
-          <li>Escribir las otras formas de crear, vivir y leer el mundo desde el aula producidas a partir de la experimentación de la enseñanza epistolar de las ciencias sociales.</li>
-        </ul>
-      </div>
-    </section>
-    <section id="theoretical-framework" class="seccion">
-      <h2 class="page-title">Marco teórico</h2>
-      <div class="content">
-        <p>Estética: Farina y Albernaz (2017) lo explican como la sensibilidad de la subjetividad "Tienen que ver con un proceso de formación estética. Es decir, con un proceso de formación de los modos de ver, oír y decir, de los modos de ubicarse en la realidad, que configuran a una subjetividad." (P.p. 116).</p>
-        <p>Signos: Gallo (2017) "Enseñar y aprender consiste básicamente en ofrecer e interpretar los signos que emiten las cosas" (P.p. 200) teniendo como propósito de nuestro trabajo entender los momentos que brindan las interacciones educativas.</p>
-        <p>El género Epistolar: "La epístola es, indudablemente, capaz de crear actos de comunicación de manera homologable a la simple conversación oral por medio de determinados actos elocutivos de distinta índole. Y de igual manera si la consideramos a partir de la modalidad interaccional del acto de la comunicación puede ser concebida como apertura a una secuencia conversacional" (Roca Sierra, M. 1990, 327. Las cursivas son nuestras).</p>
-      </div>
-    </section>
-    <section id="tracking-instrument" class="seccion">
-      <h2 class="page-title">Instrumento de Rastreo</h2>
-      <div class="content">
-        <p>Aquí podemos contar con varias cartas para trabajar dentro del aula de clases. En este se diferencian por temas y grados para el posterior trabajo. Puedes acceder al documento <a href="https://docs.google.com/spreadsheets/d/1pXzw-Y7hyTXULSsgWx3pZKQapp4hbrzl/edit#gid=1204839693">aquí</a>.</p>
-      </div>
-    </section>
+  <div id="menu">
+    <h1 class="titulo">Enseñanza Epistolar</h1>
+    <p class="titulo" >Una experimentación para pensar otras formas de crear, vivir y leer el mundo desde el aula de clase en Ciencias Sociales.</p>
+    <a class="menu-link" href="#" data-page="pregunta-investigacion">Pregunta de Investigación</a>
+    <a class="menu-link" href="#" data-page="planteamiento-problema">Planteamiento del Problema</a>
+    <a class="menu-link" href="#" data-page="objetivos-generales">Objetivo General</a>
+    <a class="menu-link" href="#" data-page="objetivos-especificos">Objetivos Específicos</a>
+    <a class="menu-link" href="#" data-page="marco-teorico">Marco Teórico</a>
+    <a class="menu-link" href="#" data-page="instrumento-rastreo">Instrumento de Rastreo</a>
+    <a class="menu-link" href="#" data-page="plan-analisis">Plan de Análisis</a>
+    <a class="menu-link" href="#" data-page="aproximacion-investigativa">Aproximación Investigativa</a>
+    <a class="menu-link" href="#" data-page="recorriendo-contexto-cartografia">Recorriendo el Contexto</a>
+    <a class="menu-link" href="#" data-page="tecnicas-instrumentos">Técnicas e Instrumentos</a>
   </div>
+
+
+  <div id="pregunta-investigacion" class="content">
+    <h1>Pregunta de Investigación</h1>
+    <p>¿Qué estética surge de una Educación Epistolar de las ciencias sociales basada en los signos libertarios y vitalistas en la institución educativa Jose Miguel de Restrepo y Puesta y la Institución Educativa Granjas Infantiles del grado octavo?</p>
+  </div>
+
+  <div id="planteamiento-problema" class="content">
+    <h1>Planteamiento del Problema</h1>
+    <p>Mientras habito en las diferentes instituciones me doy cuenta que el contexto es diferente, pero la educación no se aleja mucho, pues se presentan diferentes maneras de control sobre ese sujeto que se encuentra sentado escuchando las enseñanzas que tiene un docente para dar, pero en muchos casos estas enseñanzas no se preocupan por el sujeto que está habitando el aula de clases, sino por el contenido que se debe presentar y esto no solo lo podríamos decir desde el punto de vista de los estudiantes sino centrándonos también un poco en la cuestión de cómo el docente logra trasmitir ese conocimiento tratando de despertar el interés de sus estudiantes y que tan limitado puede estar desde la misma institución, de allí la importancia de identificar porque por medio de las cartas epistolares es posible comprender esa postura de los estudiantes frente a estos métodos de enseñanza y lo que implica, pues por medio de estas mismas es posible identificar y poder de cierta forma contribuir en ese proyecto de vida de cada estudiante, es decir, que no se limite netamente a aprender en cuanto al aporte de estas enseñanzas en su vida laboral sino la importancia dentro de su vida como un sujeto que está dentro de una sociedad.</p>
+  </div>
+
+  <div id="objetivos-generales" class="content">
+    <h1>Objetivo General</h1>
+    <p>Mapear una enseñanza epistolar de las ciencias sociales basada en signos hedonistas realizada en dos Instituciones Educativas del Municipio de Copacabana, a través de pistas metodológicas derivadas de la Cartografía, con el fin de pensar otras formas de crear, vivir y leer el mundo desde el aula de clase.</p>
+  </div>
+
+  <div id="objetivos-especificos" class="content">
+    <h1>Objetivos Específicos</h1>
+    <p>
+      <ul>
+        <li>Descubrir los signos hedonistas presentes en las cartas con potencial didáctico para el grado octavo en el área de Ciencias Sociales.</li>
+        <li>Leer los signos hedonistas presentes en las cartas realizadas por estudiantes de dos Instituciones Educativas del municipio de Copacabana.</li>
+        <li>Escribir las otras formas de crear, vivir y leer el mundo desde el aula producidas a partir de la experimentación de la enseñanza epistolar de las ciencias sociales.</li>
+      </ul>
+    </p>
+  </div>
+
+  <div id="marco-teorico" class="content">
+    <h1>Marco Teórico</h1>
+    <p>Estética: Farina y Albernaz (2017) lo explican como la sensibilidad de la subjetividad "Tienen que ver con un proceso de formación estética. Es decir, con un proceso de formación de los modos de ver, oír y decir, de los modos de ubicarse en la realidad, que configuran a una subjetividad" (p.p. 116).</p>
+    <p>Signos: Gallo (2017) "Enseñar y aprender consiste básicamente en ofrecer e interpretar los signos que emiten las cosas" (p.p. 67).</p>
+    <p>Hedonismo: Farina y Albernaz (2017) lo expresan como una forma de vida que se genera desde el cuerpo, desde la posibilidad de disfrute sin limitaciones, sin prejuicios, "como una opción de vida que desafía el pensamiento económico productivista y el político con poder, busca otros modos de vida, otros flujos de subjetividad y corporalidad" (p.p. 22).</p>
+    <p>Cartografía: Gallo (2017) "La cartografía es un ejercicio de escritura territorial que opera con signos que generan movimientos afectivos. El recorrido que se plantea no sigue una línea cronológica y espacial sino que es un movimiento que se basa en la desobediencia al pensar hegemónico y homogéneo" (p.p. 19).</p>
+  </div>
+
+  <div id="instrumento-rastreo" class="content">
+    <h1>Instrumento de Rastreo</h1>
+    <p>El instrumento de rastreo utilizado para recolectar las cartas epistolares de los estudiantes fue una guía de preguntas abiertas que abordaban temáticas relacionadas con sus experiencias, emociones y percepciones frente a la enseñanza de las ciencias sociales.</p>
+  </div>
+
+  <div id="plan-analisis" class="content">
+    <h1>Plan de Análisis</h1>
+    <p>El análisis de las cartas epistolares se realizó mediante una lectura detallada y se identificaron los signos hedonistas presentes en cada una de ellas. Posteriormente, se agruparon los signos por categorías y se realizaron reflexiones y conexiones entre ellos para identificar patrones y posibles líneas de acción pedagógica.</p>
+  </div>
+
+  <div id="aproximacion-investigativa" class="content">
+    <h1>Aproximación Investigativa</h1>
+    <p>La investigación se llevó a cabo en dos Instituciones Educativas del Municipio de Copacabana, donde se implementó la enseñanza epistolar en el área de Ciencias Sociales con estudiantes de grado octavo. Se recolectaron cartas epistolares escritas por los estudiantes como respuesta a preguntas abiertas sobre su experiencia en el aula y su percepción de la enseñanza.</p>
+  </div>
+
+  <div id="recorriendo-contexto-cartografia" class="content">
+    <h1>Recorriendo el Contexto</h1>
+    <p>El recorrido por el contexto se realizó a través de la lectura y análisis de las cartas epistolares, buscando identificar los signos hedonistas presentes en ellas y reflexionando sobre su significado en el contexto de la enseñanza de las ciencias sociales. Se realizaron conexiones y asociaciones entre los signos encontrados para construir una representación cartográfica del contexto.</p>
+  </div>
+
+  <div id="tecnicas-instrumentos" class="content">
+    <h1>Técnicas e Instrumentos</h1>
+    <p>Las técnicas utilizadas fueron la recolección de cartas epistolares y la lectura y análisis de las mismas. Como instrumento se utilizó una guía de preguntas abiertas para rastrear las experiencias y percepciones de los estudiantes en relación con la enseñanza de las ciencias sociales.</p>
+  </div>
+
   <script>
-    // JavaScript para centrar el texto verticalmente y ocultar las secciones
-    window.onload = function() {
-      mostrarSeccion('intro');
-      var container = document.getElementsByClassName('container')[0];
-      var secciones = document.getElementsByClassName('seccion');
-      for (var i = 0; i < secciones.length; i++) {
-        secciones[i].style.display = 'none';
-      }
-      container.style.display = 'block';
-    };
+    const menuLinks = document.querySelectorAll('.menu-link');
+    const contentSections = document.querySelectorAll('.content');
+
+    menuLinks.forEach((link) => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const page = link.getAttribute('data-page');
+        const content = document.getElementById(page);
+
+        contentSections.forEach((section) => {
+          section.classList.remove('active');
+        });
+
+        content.classList.add('active');
+      });
+    });
   </script>
 </body>
 </html>
